@@ -1,0 +1,21 @@
+language: go
+go:
+    - 1.11
+before_script:
+    - go get "github.com/google/go-github/github"
+    - go get "github.com/spf13/pflag"
+    - go get "golang.org/x/oauth2"
+script:
+    - make
+before_deploy:
+    - make release
+deploy:
+    provider: releases
+    api_key:
+        secure:
+            secure: TkLAz04E8Uyyg8txLb2Ktz/3VYyTEFf3OiBCx+BoZxPMJA5h4jfWtQRlYTGBNtqzJhs4mt4I6lJs2OE62pIjN5OOiHCFYWvAX4kp2GxtLnxjShv/OM5nq6pfS0QvuWvV9HBdjFv828qv7wW3N/62/tMPwSjbNOcg2yv0lA3rQN3FhAx96xuVSG1NPOXluZf1kKETrWi/QVYHvaGxrZGHZUuJTEhN2fUFUq8njwS8Izknd0woNKPK/nj+B2MygNJF6Wjpa4wWjuuDJ83DHL94ag+h72sxwUM3SxedAuJXfNBLzws+lKvuHpOKDFIksKwK/nDjTEFDE5VrTTGekULaWyGyetBGZCWEU2KqMzoimbXgn2YF/Eb37GlyTVKTan+CRnbDFbz1nUaLVeFMxOaivirYO8Xcpg2CMMubzgS9XkNVPnHG5KhPOgEu7+vxG0k+fxAIBAekzffOoYDvKm/cd1fIJfUc/AF+wa+z1EGes/wq9OcFsEDQvw6srBavfm+EkKK+w4TAdjSKmBrFzNBHHk3ecik57TLpYOVPjKjqj5Z39DBE5IGln1UtsLVxnhFatcceFsc1uFOyQNz/M8ar60sx9OX32EDRSyKyUze/UEjVY4gL/W3Z85J7mptV98KsYJ5bY05YxUtC+n27hM3xtYJ3F6T5u/6JGRsrNGOQWk8=
+    file: dist/*
+    file_glob: true
+    skip_cleanup: true
+    on:
+        tags: true
