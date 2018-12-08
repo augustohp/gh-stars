@@ -1,4 +1,6 @@
 # GitHub Stars
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faugustohp%2Fgh-stars.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Faugustohp%2Fgh-stars?ref=badge_shield)
+
 
 Lists your most recent GitHub stars in a compiled list that can be sent in a
 digest format.
@@ -34,3 +36,7 @@ There are [make][] targets for:
 There are no *automated tests* and the code lacks love.
 
 [make]: https://www.gnu.org/software/make/
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faugustohp%2Fgh-stars.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Faugustohp%2Fgh-stars?ref=badge_large)
