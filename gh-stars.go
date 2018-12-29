@@ -22,7 +22,7 @@ type option struct {
 	help     bool
 }
 
-const Version = "1.0.0"
+const Version = "1.0.1"
 
 var opt = &option{}
 
@@ -77,7 +77,7 @@ func run() {
 
 	stars, err := listLastStars(ctx, gh, authenticatedUser.GetLogin(), opt.limit)
 	if err != nil {
-		log.Fatalf("Error listing starred activity of %s: %v", authenticatedUser.Login, err)
+		log.Fatalf("Error listing starred activity of %s: %v", authenticatedUser.GetLogin(), err)
 	}
 
 	lastWeek := datetime.BeginningOfWeek()

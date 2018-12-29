@@ -3,7 +3,6 @@
 Lists your most recent GitHub stars in a compiled list that can be sent in a
 digest format.
 
-    $ gh-login
     $ gh-stars
     jez/pandoc-starter
     CDSoft/pp
