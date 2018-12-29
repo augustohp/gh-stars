@@ -3,10 +3,10 @@
 Lists your most recent GitHub stars in a compiled list that can be sent in a
 digest format.
 
-    $ gh-stars
-    jez/pandoc-starter
-    CDSoft/pp
-    haya14busa/reviewdog
+    $ gh-stars -t "YOUR GITHUB TOKEN"
+    jez/pandoc-starter: 📄My pandoc markdown templates and makefiles
+    CDSoft/pp: PP - Generic preprocessor (with pandoc in mind) - macros, literate programming, diagrams, scripts...
+    haya14busa/reviewdog: 🐶 Automated code review tool integrated with any code analysis tools regardless of programming language
 
 Stars are listed in a "week" basis starting "Sunday".
 

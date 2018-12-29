@@ -22,7 +22,7 @@ type option struct {
 	help     bool
 }
 
-const Version = "1.0.1"
+const Version = "1.1.0"
 
 var opt = &option{}
 
@@ -88,7 +88,7 @@ func run() {
 		if starredAt.Before(lastWeek) {
 			continue
 		}
-		fmt.Fprintf(os.Stdout, "%s/%s\n", owner.GetLogin(), repository.GetName())
+		fmt.Fprintf(os.Stdout, "%s/%s: %s\n", owner.GetLogin(), repository.GetName(), repository.GetDescription())
 	}
 }
 
