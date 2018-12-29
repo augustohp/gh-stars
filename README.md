@@ -23,6 +23,12 @@ Stars are listed in a "week" basis starting "Sunday".
 You can also set `GHSTARS_GITHUB_TOKEN` environment variable instead allowing
 your GitHub token lurking in your history.
 
+You can also run using [Docker][]:
+
+	$ docker run -e GHSTARS_GITHUB_TOKEN="YOUR GITHUB TOKEN" augustohp/gh-stars
+
+[Docker]: https://docker.com
+
 ## Development
 
 There are [make][] targets for:

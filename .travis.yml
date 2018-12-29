@@ -1,10 +1,11 @@
 language: go
+services:
+    - docker
 go:
     - 1.11
 before_script:
-    - go get "github.com/google/go-github/github"
-    - go get "github.com/spf13/pflag"
-    - go get "golang.org/x/oauth2"
+    - go get -v ./...
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 script:
     - make
 before_deploy:
